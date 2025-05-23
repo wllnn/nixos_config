@@ -12,7 +12,7 @@
     "nix-command"
     "flakes"
   ];
-
+  nix.settings.download-buffer-size = 524288000;
   # Set your time zone.
   time.timeZone = "Asia/Shanghai";
 
