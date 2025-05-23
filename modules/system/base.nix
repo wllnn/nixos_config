@@ -30,7 +30,15 @@
     LC_TELEPHONE = "zh_CN.UTF-8";
     LC_TIME = "zh_CN.UTF-8";
   };
-
+  # 垃圾回收
+  nix.gc = {
+    automatic = true;
+    options = "--delete-older-than 5d";
+    dates = "Sun 19:00";
+  };
+  # 最小化磁盘占用
+  nix.optimise.automatic = true;
+  nix.optimise.dates = [ "16:30" ];
   # Configure keymap in X11 (如果所有主机都有 X11 可以放这里，否则放特定主机配置里)
   # services.xserver.xkb = {
   #   layout = "cn";
