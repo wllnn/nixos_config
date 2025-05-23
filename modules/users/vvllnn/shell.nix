@@ -8,6 +8,7 @@
     enableCompletion = true;
     bashrcExtra = ''
       export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/go/bin"
+      export NIX_AUTO_RUN=1
     '';
     shellAliases = {
       ll = "ls -al";
